@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src http: https: data:; style-src 'self'; script-src 'self';">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="header">Recently Closed</header>
+  <ul id="recent-list" class="list" role="menu"></ul>
+
+  <div id="see-all" class="see-all" hidden>
+    <button id="see-all-toggle" class="row see-all-toggle" type="button" aria-expanded="false">
+      <span class="icon chevron">▸</span>
+      <span class="title">See all</span>
+      <span class="count" id="see-all-count"></span>
+    </button>
+    <ul id="overflow-list" class="list overflow" role="menu" hidden></ul>
+  </div>
+
+  <p id="empty" class="empty" hidden>No recently closed tabs or windows.</p>
+
+  <!-- Floating tooltip listing the tabs of a hovered closed window. -->
+  <div id="tooltip" class="tooltip" role="tooltip" hidden></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

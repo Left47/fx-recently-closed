@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "Recently Closed (Merged)",
+  "version": "1.0.0",
+  "description": "Merges Recently Closed Tabs and Recently Closed Windows into one list. Shows the 5 most recent inline (with subtab counts for windows) and the rest under \"See all\".",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "recently-closed-merged@jithomas.mozilla.com",
+      "strict_min_version": "115.0"
+    }
+  },
+  "permissions": [
+    "sessions",
+    "tabs"
+  ],
+  "browser_action": {
+    "default_title": "Recently Closed",
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon.svg",
+      "32": "icons/icon.svg"
+    }
+  },
+  "icons": {
+    "48": "icons/icon.svg",
+    "96": "icons/icon.svg"
+  }
+}

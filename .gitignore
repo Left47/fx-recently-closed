@@ -1,0 +1,11 @@
+# web-ext build output
+web-ext-artifacts/
+*.zip
+*.xpi
+
+# Node / tooling
+node_modules/
+npm-debug.log*
+
+# macOS
+.DS_Store

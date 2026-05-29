@@ -1,0 +1,174 @@
+:root {
+  --bg: #ffffff;
+  --fg: #15141a;
+  --muted: #5b5b66;
+  --hover: #f0f0f4;
+  --border: #d7d7db;
+  --accent: #0060df;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #2b2a33;
+    --fg: #fbfbfe;
+    --muted: #b1b1bb;
+    --hover: #52525e;
+    --border: #52525e;
+    --accent: #00ddff;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  width: 340px;
+  background: var(--bg);
+  color: var(--fg);
+  font: caption;
+  font-size: 13px;
+}
+
+.header {
+  padding: 10px 12px 6px;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--muted);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0 6px 6px;
+}
+
+.overflow {
+  padding-top: 0;
+  border-top: 1px solid var(--border);
+  margin-top: 2px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 7px 8px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.row:hover,
+.row:focus-visible {
+  background: var(--hover);
+  outline: none;
+}
+
+/* Window rows show a hint that they reveal more on hover. */
+.row.has-flyout::after {
+  content: "›";
+  margin-left: 2px;
+  color: var(--muted);
+}
+
+.icon {
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.favicon {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+}
+
+.window-glyph {
+  font-size: 14px;
+}
+
+.title {
+  flex: 1 1 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.count {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.see-all {
+  border-top: 1px solid var(--border);
+  margin: 0 6px;
+  padding-top: 4px;
+}
+
+.see-all-toggle .chevron {
+  transition: transform .12s ease;
+  color: var(--muted);
+}
+
+.see-all-toggle[aria-expanded="true"] .chevron {
+  transform: rotate(90deg);
+}
+
+.see-all-toggle .title {
+  font-weight: 500;
+}
+
+.empty {
+  padding: 4px 14px 16px;
+  color: var(--muted);
+}
+
+/* Floating tooltip of a closed window's tab names. Non-interactive: it
+   floats over the list near the hovered row and never resizes the popup. */
+.tooltip {
+  position: fixed;
+  z-index: 10;
+  max-width: 300px;
+  max-height: 320px;
+  overflow-y: auto;
+  padding: 6px 0;
+  background: var(--bg);
+  color: var(--fg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .25);
+  pointer-events: none;
+}
+
+.tooltip[hidden] { display: none; }
+
+.tooltip-head {
+  padding: 2px 12px 6px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--muted);
+}
+
+.tooltip-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tooltip-item .title { font-size: 12px; }
