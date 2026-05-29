@@ -5,7 +5,12 @@
 A Firefox extension that merges **Recently Closed Tabs** and **Recently Closed
 Windows** into a single, time-ordered list in a toolbar popup.
 
-![The Recently Closed popup, showing a merged list of closed tabs and windows with a hover tooltip listing a closed window's tabs and a "See all" toggle.](store/screenshot.png)
+The popup, showing a merged list of closed tabs and windows with a hover
+tooltip listing a closed window's tabs and a "See all" toggle (light and dark
+themes):
+
+![Recently Closed popup, light theme](store/screenshot.png)
+![Recently Closed popup, dark theme](store/screenshot-dark.png)
 
 - The **5 most recent** closed items are shown inline.
 - Windows show how many tabs they contained (e.g. `5 tabs`).
@@ -51,7 +56,8 @@ web-ext build
 | `popup/popup.js` | Fetches and renders the merged recently-closed list. |
 | `icons/icon.svg` | Toolbar / add-on icon (theme-aware, used at runtime). |
 | `store/icon-128.png` | 128×128 listing icon for the addons.mozilla.org submission. |
-| `store/screenshot.png` | Popup screenshot for the addons.mozilla.org listing. |
+| `store/screenshot.png` | Popup screenshot (light theme) for the addons.mozilla.org listing. |
+| `store/screenshot-dark.png` | Popup screenshot (dark theme) for the addons.mozilla.org listing. |
 
 ## Permissions
 
