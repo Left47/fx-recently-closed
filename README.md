@@ -5,6 +5,8 @@
 A Firefox extension that merges **Recently Closed Tabs** and **Recently Closed
 Windows** into a single, time-ordered list in a toolbar popup.
 
+> **Install:** [Get it on addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/recently-closed-shortcut/) — *pending review; the link goes live once approved.*
+
 The popup, showing a merged list of closed tabs and windows with a hover
 tooltip listing a closed window's tabs and a "See all" toggle (light and dark
 themes):
