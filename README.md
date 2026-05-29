@@ -1,7 +1,11 @@
 # Recently Closed
 
+<img src="store/icon-128.png" alt="Recently Closed icon" width="96" align="right">
+
 A Firefox extension that merges **Recently Closed Tabs** and **Recently Closed
 Windows** into a single, time-ordered list in a toolbar popup.
+
+![The Recently Closed popup, showing a merged list of closed tabs and windows with a hover tooltip listing a closed window's tabs and a "See all" toggle.](store/screenshot.png)
 
 - The **5 most recent** closed items are shown inline.
 - Windows show how many tabs they contained (e.g. `5 tabs`).
@@ -41,11 +45,13 @@ web-ext build
 
 | File | Purpose |
 |------|---------|
-| `manifest.json` | Extension manifest (MV2). Requests `sessions` + `tabs`. |
+| `manifest.json` | Extension manifest (MV3). Requests `sessions` + `tabs`. |
 | `popup/popup.html` | Popup markup. |
 | `popup/popup.css` | Styling (light/dark aware). |
 | `popup/popup.js` | Fetches and renders the merged recently-closed list. |
-| `icons/icon.svg` | Toolbar / add-on icon. |
+| `icons/icon.svg` | Toolbar / add-on icon (theme-aware, used at runtime). |
+| `store/icon-128.png` | 128×128 listing icon for the addons.mozilla.org submission. |
+| `store/screenshot.png` | Popup screenshot for the addons.mozilla.org listing. |
 
 ## Permissions
 
