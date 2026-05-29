@@ -1,4 +1,4 @@
-# Recently Closed (Merged)
+# Recently Closed
 
 A Firefox extension that merges **Recently Closed Tabs** and **Recently Closed
 Windows** into a single, time-ordered list in a toolbar popup.

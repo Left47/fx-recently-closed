@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Recently Closed (Merged)",
+  "name": "Recently Closed",
   "version": "1.0.0",
   "description": "Merges Recently Closed Tabs and Recently Closed Windows into one list. Shows the 5 most recent inline (with subtab counts for windows) and the rest under \"See all\".",
   "browser_specific_settings": {
