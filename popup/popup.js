@@ -15,10 +15,24 @@ const els = {
   tooltip: document.getElementById("tooltip"),
 };
 
-/** Restore a closed session by its sessionId, then close the popup. */
+/** Restore a closed session by its sessionId, focus it, then close the popup. */
 async function restore(sessionId) {
   try {
-    await api.sessions.restore(sessionId);
+    // restore() returns the restored Session, with either .tab or .window.
+    const session = await api.sessions.restore(sessionId);
+
+    if (session && session.tab) {
+      // Activate the tab and bring its window to the foreground.
+      const tab = session.tab;
+      if (tab.windowId != null) {
+        await api.windows.update(tab.windowId, { focused: true });
+      }
+      if (tab.id != null) {
+        await api.tabs.update(tab.id, { active: true });
+      }
+    } else if (session && session.window && session.window.id != null) {
+      await api.windows.update(session.window.id, { focused: true });
+    }
   } catch (e) {
     console.error("Failed to restore session:", e);
   }
